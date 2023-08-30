@@ -1,0 +1,137 @@
+<html>
+<head>
+	<title>HOME</title>
+	<style>
+		body {
+			background-color: #80ffff;
+			color: black;
+		}
+
+
+
+		form {
+			border: 30px solid gray;
+			padding: 50px 0px 2px 0px;
+			border-radius: 50px;
+			width: 250px;
+			height: 300px;
+			margin: 8px 0;
+			background-color: #00cccc;
+			color: black;
+	
+		}
+
+
+		.one, .two {
+			border: none;
+			height: 30px;
+			width: 200px;
+			border-radius: 5px;
+		    display: inline-block;
+		    box-sizing: border-box;
+		    padding: 8px 15px;
+			margin: 8px 0;
+
+		}
+
+
+		.ans {
+			border: none;
+			height: 40px;
+			width: 170px;
+			border-radius: 5px;
+			display: inline-block;
+		    box-sizing: border-box;
+		    padding: 8px 15px;
+			margin: 8px 0;
+
+		}
+
+		.plus, .minus, .multiply, .divide {
+			border-radius: 12px;
+			border: none;
+			padding: 5px 11px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 20px;
+			margin: 4px 2px;
+			cursor: pointer;
+			color: white;
+			background-color: #f44336;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<br><br><br><br><br><br>
+	<center>
+		<form>
+
+			<input class="one" type="text" id="first" placeholder="Enter a First Number: "><br><br>
+			<input class="two" type="text" id="second" placeholder="Enter a Second Number: "><br><br><br>
+
+			<input class="plus" type="button" value="+" id="result" onclick="add()">
+			<input class="minus" type="button" value="-" id="result" onclick="minus()">
+			<input class="multiply" type="button" value="*" id="result" onclick="multiply()">
+			<input class="divide" type="button" value="/" id="result" onclick="divide()">
+			<br><br>
+
+			<input class="ans" type="text" id="Result"
+				placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Answer  "><br>
+
+	</center>
+	</form>
+	<center>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<label>--- &copy 2021 V Production</label>
+	</center>
+	<script>
+
+		function add() {
+			var NumOne = document.getElementById("first").value;
+
+			var NumTwo = document.getElementById("second").value;
+
+			var Sum_of_both = Number(NumOne) + Number(NumTwo);
+			document.getElementById("Result").value = Sum_of_both;
+			console.log(Sum_of_both); // checking for back-end function how's it work 
+
+		}
+
+		function minus() {
+			var NumOne = document.getElementById("first").value;
+
+			var NumTwo = document.getElementById("second").value;
+			var Sum_of_both = Number(NumOne) - Number(NumTwo);
+			document.getElementById("Result").value = Sum_of_both;
+			console.log(Sum_of_both);
+		}
+
+		function multiply() {
+			var NumOne = document.getElementById("first").value;
+
+			var NumTwo = document.getElementById("second").value;
+			var Sum_of_both = Number(NumOne) * Number(NumTwo);
+			document.getElementById("Result").value = Sum_of_both;
+			console.log(Sum_of_both);
+		}
+
+		function divide() {
+			var NumOne = document.getElementById("first").value;
+
+			var NumTwo = document.getElementById("second").value;
+			var Sum_of_both = Number(NumOne) / Number(NumTwo);
+			document.getElementById("Result").value = Sum_of_both;
+		}
+		
+
+
+	</script>
+
+</body>
+
+</html>
